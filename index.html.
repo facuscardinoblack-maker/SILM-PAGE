@@ -6,10 +6,39 @@
 <link rel="stylesheet"
 herf="style.css">
   </head>
-  <body>
-    <h1>bienvenido a SILM</h1>
-    <p>estamos construyendo nuestra
-    presencia web.</p>
-  </body>
+<body>
+    <header style="background: #2c3e50; color: white; padding: 20px;">
+        <h1>SILM</h1>
+        <p>Soluciones Profesionales</p>
+    </header>
+
+    <main style="padding: 40px;">
+        <h2>Nuestros Servicios</h2>
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+            <div style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; width: 200px;">
+                <h3>Servicio 1</h3>
+                <p>Descripción breve de lo que hace SILM aquí.</p>
+            </div>
+            <div style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; width: 200px;">
+                <h3>Servicio 2</h3>
+                <p>Otra solución increíble para tus clientes.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer style="margin-top: 50px; font-size: 0.8rem;">
+        <p>&copy; 2026 SILM - Todos los derechos reservados.</p>
+    </footer>
+</body>
   </head>
 </html>html>
+
+
+
+
+
+
+
+
+
+
