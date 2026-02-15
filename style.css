@@ -121,45 +121,52 @@ h2[id], section[id] {
 }
 
 /* Estilo del Botón Flotante */
-/* Botón Flotante de WhatsApp a la Derecha */
+/* 1. Definir la animación de Pulso */
+@ keyframes pulso-whatsapp {
+    0 % { box-shadow: 0 0 0 0 rgba (85, 239, 196, 0.7); }
+    70 % { box-shadow: 0 0 0 15 px rgba (85, 239, 196, 0); }
+    100 % { box-shadow: 0 0 0 0 rgba (85, 239, 196, 0); }
+}
+
+/* 2. Estilo mejorado del Botón Flotante */
 .whatsapp-float {
-    position: fixed;
-    bottom: 30 px;
-    right: 30 px; /* Asegurado a la derecha */
-    background-color: #55efc4; /* Tu verde agua */
+    position: fixed ! important; /* Forzamos posición fija */
+    bottom: 30 px ! important;
+    right: 30 px ! important;    /* Forzamos derecha */
+    left: auto ! important;     /* Anulamos cualquier empuje a la izquierda */
+    background-color: #55efc4;
     display: flex;
     align-items: center;
     gap: 10 px;
     padding: 12 px 20 px;
     border-radius: 50 px;
-    text-decoration: none ! important; /* Quita el subrayado */
+    text-decoration: none ! important;
     font-weight: bold;
-    box-shadow: 0 4 px 15 px rgba (0,0,0,0.4);
     z-index: 10000;
     transition: all 0.3 s ease;
+    
+    /* Aplicar la animación */
+    animation: pulso-whatsapp 2 s infinite;
 }
 
-/* Forzar el color del texto para que NO sea violeta */
 .whatsapp-float span {
-    color: #2d3436 ! important ; /* Gris oscuro metalizado para máxima legibilidad */
+    color: #2d3436 ! important;
     font-size: 16 px;
+    text-decoration: none ! important;
 }
 
 .whatsapp-float:hover {
     transform: scale (1.1);
     background-color: #00b894;
-    box-shadow: 0 6 px 20 px rgba (0,0,0,0.5);
+    animation: none; /* Se detiene el pulso al pasar el mouse */
 }
 
 /* Ajuste para móviles */
 @ media (max-width: 480 px) {
     .whatsapp-float {
-        bottom: 20 px;
-        right: 20 px;
+        bottom: 20 px ! important;
+        right: 20 px ! important;
         padding: 12 px;
-    }
-    .whatsapp-float span {
-        display: none; /* En celular queda solo el circulito con el logo */
     }
 }
 
