@@ -1,13 +1,14 @@
-@ import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-html { scroll-behavior: smooth; }
+html { 
+    scroll-behavior: smooth; 
+}
 
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    /* Gris oscuro metalizado de fondo */
     background-color: #2d3436; 
-    color: #dfe6e9; /* Texto claro legible */
+    color: #dfe6e9;
     line-height: 1.6;
 }
 
@@ -16,27 +17,27 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1e272e; /* Gris casi negro */
-    padding: 15 px 5 %;
+    background-color: #1e272e;
+    padding: 15px 5%;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    box-shadow: 0 4 px 15 px rgba (0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     z-index: 1000;
 }
 
 .logo {
     font-weight: 700;
-    font-size: 1.8 rem;
-    color: #55efc4; /* Tu verde agua */
-    letter-spacing: 2 px;
+    font-size: 1.8rem;
+    color: #55efc4;
+    letter-spacing: 2px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 25 px;
+    gap: 25px;
 }
 
 .nav-links a {
@@ -44,8 +45,8 @@ body {
     color: #dfe6e9;
     font-weight: 400;
     text-transform: uppercase;
-    font-size: 0.85 rem;
-    transition: 0.3 s;
+    font-size: 0.85rem;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -54,16 +55,16 @@ body {
 
 /* Header con filtro metalizado */
 header {
-    background: linear-gradient (rgba (45, 52, 54, 0.85), rgba (45, 52, 54, 0.85)), 
+    background: linear-gradient(rgba(45, 52, 54, 0.85), rgba(45, 52, 54, 0.85)), 
                 url('https://images.unsplash.com/photo-1581578731548-c64695ce6958?auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
-    padding: 160 px 20 px 100 px 20 px;
+    padding: 160px 20px 100px 20px;
     text-align: center;
 }
 
 header h1 {
-    font-size: 4 rem;
+    font-size: 4rem;
     color: #55efc4;
     margin: 0;
 }
@@ -71,34 +72,34 @@ header h1 {
 /* Botón Cotizar */
 .btn-cotizar {
     display: inline-block;
-    margin-top: 30 px;
+    margin-top: 30px;
     background-color: #55efc4;
     color: #2d3436;
-    padding: 15 px 40 px;
+    padding: 15px 40px;
     text-decoration: none;
-    border-radius: 5 px;
+    border-radius: 5px;
     font-weight: bold;
-    transition: 0.3 s;
+    transition: 0.3s;
 }
 
 .btn-cotizar:hover {
     background-color: #00b894;
-    transform: scale (1.05);
+    transform: scale(1.05);
 }
 
-/* Tarjetas de Servicio - Estilo Metalizado */
+/* Tarjetas de Servicio */
 .service-card {
-    background: #353b48; /* Gris medio metalizado */
-    padding: 40 px 30 px;
-    border-radius: 15 px;
-    box-shadow: 0 10 px 20 px rgba (0,0,0,0.2);
-    transition: 0.3 s;
-    border: 1 px solid #485460;
+    background: #353b48;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border: 1px solid #485460;
 }
 
 .service-card:hover {
     border-color: #55efc4;
-    transform: translateY (-10 px);
+    transform: translateY(-10px);
 }
 
 .service-card h3 {
@@ -111,65 +112,57 @@ header h1 {
 
 /* Sección Nosotros */
 #nosotros {
-    padding: 100 px 20 px;
+    padding: 100px 20px;
     background-color: #2f3542;
 }
 
 /* Ajuste de anclas */
 h2[id], section[id] {
-    scroll-margin-top: 100 px;
+    scroll-margin-top: 100px;
 }
 
-/* Estilo del Botón Flotante */
-/* 1. Definir la animación de Pulso */
-@ keyframes pulso-whatsapp {
-    0 % { box-shadow: 0 0 0 0 rgba (85, 239, 196, 0.7); }
-    70 % { box-shadow: 0 0 0 15 px rgba (85, 239, 196, 0); }
-    100 % { box-shadow: 0 0 0 0 rgba (85, 239, 196, 0); }
+/* Animación de Pulso */
+@keyframes pulso-whatsapp {
+    0% { box-shadow: 0 0 0 0 rgba(85, 239, 196, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(85, 239, 196, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(85, 239, 196, 0); }
 }
 
-/* 2. Estilo mejorado del Botón Flotante */
+/* Botón Flotante de WhatsApp */
 .whatsapp-float {
-    position: fixed ! important; /* Forzamos posición fija */
-    bottom: 30 px ! important;
-    right: 30 px ! important;    /* Forzamos derecha */
-    left: auto ! important;     /* Anulamos cualquier empuje a la izquierda */
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    left: auto !important;
     background-color: #55efc4;
     display: flex;
     align-items: center;
-    gap: 10 px;
-    padding: 12 px 20 px;
-    border-radius: 50 px;
-    text-decoration: none ! important;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none !important;
     font-weight: bold;
-    z-index: 10000;
-    transition: all 0.3 s ease;
-    
-    /* Aplicar la animación */
-    animation: pulso-whatsapp 2 s infinite;
+    z-index: 99999;
+    transition: all 0.3s ease;
+    animation: pulso-whatsapp 2s infinite;
 }
 
 .whatsapp-float span {
-    color: #2d3436 ! important;
-    font-size: 16 px;
-    text-decoration: none ! important;
+    color: #2d3436 !important;
+    font-size: 16px;
 }
 
 .whatsapp-float:hover {
-    transform: scale (1.1);
+    transform: scale(1.1);
     background-color: #00b894;
-    animation: none; /* Se detiene el pulso al pasar el mouse */
+    animation: none;
 }
 
 /* Ajuste para móviles */
-@ media (max-width: 480 px) {
+@media (max-width: 480px) {
     .whatsapp-float {
-        bottom: 20 px ! important;
-        right: 20 px ! important;
-        padding: 12 px;
+        bottom: 20px !important;
+        right: 20px !important;
+        padding: 12px;
     }
 }
-
-
-
-
