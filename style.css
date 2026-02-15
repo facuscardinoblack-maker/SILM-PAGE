@@ -166,3 +166,20 @@ h2[id], section[id] {
         padding: 12px;
     }
 }
+/* Nuevo pulido para fotos en tarjetas */
+.service-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Evita que la foto se estire feo */
+    border-radius: 15px 15px 0 0; /* Redondea solo arriba */
+}
+
+.service-card {
+    padding: 0 !important; /* Quita el espacio para que la foto toque los bordes */
+    overflow: hidden; /* Corta la foto para que respete el redondeado de la tarjeta */
+}
+
+.service-content {
+    padding: 25px; /* Le da aire al texto debajo de la foto */
+    text-align: left; /* El texto alineado a la izquierda se ve más serio con fotos */
+}
